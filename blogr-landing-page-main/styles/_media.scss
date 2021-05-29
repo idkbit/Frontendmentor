@@ -2,13 +2,16 @@
   .burger {
     display: none;
   }
+
   .intro {
     &__btns {
-      display: block;
       padding-right: 6rem;
     }
   }
-  .nav {
-    display: block;
+
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -6,25 +6,23 @@
     margin-bottom: 5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-top: 3rem;
+    justify-content: space-between;
+    position: relative;
   }
-  &__container {
-    display: flex;
-    align-items: center;
+  &__logo {
     padding-left: 6rem;
-  }
-  &__btns {
-    display: none;
   }
 }
 .nav {
-  display: none;
   &__list {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     margin-left: 2rem;
+    &_active {
+      flex-direction: column;
+    }
   }
   &__item {
     position: relative;
@@ -100,6 +98,26 @@
     &:hover {
       background-color: $clr-primary-veryLightRed;
       color: $clr-white;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  &_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $clr-white;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    height: 400px;
+    align-items: center;
+    & .btn {
+      display: block;
+      &_login {
+        color: $clr-primary-darkBlue;
+      }
     }
   }
 }

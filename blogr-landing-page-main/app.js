@@ -1,4 +1,7 @@
 const navLinks = document.querySelectorAll(".nav__link");
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+const navList = document.querySelector(".nav__list");
 
 window.addEventListener("click", e => {
   navLinks.forEach(link => {
@@ -7,7 +10,7 @@ window.addEventListener("click", e => {
       link.nextElementSibling.classList.remove("dropdown-container_active");
     }
   })
-})
+});
 
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
@@ -20,4 +23,9 @@ navLinks.forEach(link => {
       }
     })
   })
-})
+});
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("menu_active");
+  navList.classList.toggle("nav__list_active");
+});
