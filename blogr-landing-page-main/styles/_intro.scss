@@ -1,6 +1,7 @@
 .intro {
-  background: url("../images/bg-pattern-intro.svg") no-repeat center center/200%,
-    linear-gradient($clr-bg-veryLightRed, $clr-bg-lightRed);
+  background: url("../images/bg-pattern-intro.svg") no-repeat center
+      center/cover,
+    linear-gradient(to right, $clr-bg-veryLightRed, $clr-bg-lightRed);
   height: 600px;
   &__nav {
     margin-bottom: 5rem;
@@ -11,7 +12,7 @@
     position: relative;
   }
   &__logo {
-    padding-left: 6rem;
+    padding-left: 2rem;
   }
 }
 .nav {
@@ -106,16 +107,38 @@
   display: none;
   &_active {
     display: flex;
+    position: fixed;
+    top: 7rem;
+    left: 2rem;
+    width: 80%;
     flex-direction: column;
     justify-content: space-between;
     background-color: $clr-white;
     padding: 1.5rem 1rem;
     border-radius: 5px;
-    height: 400px;
     align-items: center;
     & .btn {
       display: block;
       &_login {
+        color: $clr-primary-darkBlue;
+      }
+      &_btn-white {
+        background: linear-gradient(
+          to right,
+          $clr-bg-veryLightRed,
+          $clr-bg-lightRed
+        );
+        color: $clr-white;
+      }
+    }
+    .nav {
+      &__item:not(:first-of-type) {
+        margin-left: 0;
+      }
+      &__item {
+        margin-bottom: 2rem;
+      }
+      &__link {
         color: $clr-primary-darkBlue;
       }
     }
@@ -123,5 +146,5 @@
 }
 
 .burger {
-  padding-right: 6rem;
+  padding-right: 2rem;
 }
