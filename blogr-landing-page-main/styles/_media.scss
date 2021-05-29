@@ -1,0 +1,14 @@
+@media screen and (min-width: 53.75em) {
+  .burger {
+    display: none;
+  }
+  .intro {
+    &__btns {
+      display: block;
+      padding-right: 6rem;
+    }
+  }
+  .nav {
+    display: block;
+  }
+}

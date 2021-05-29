@@ -4,11 +4,18 @@ $fontOverpass: "Overpass", sans-serif;
 
 // colors
 
+// primary
+$clr-primary-darkBlue: hsl(208, 49%, 24%);
+$clr-primary-veryLightRed: hsl(355, 100%, 74%);
+$clr-primary-lightRed: hsl(356, 100%, 66%);
+
+// neutral
 $clr-white: hsl(0, 0%, 100%);
 $clr-grayBlue: hsl(240, 2%, 79%);
 $clr-darkGrayBlue: hsl(207, 13%, 34%);
 $clr-darkBlackBlue: hsl(240, 10%, 16%);
 
+// gradient
 $clr-bg-veryLightRed: hsl(13, 100%, 72%);
 $clr-bg-lightRed: hsl(353, 100%, 62%);
 
