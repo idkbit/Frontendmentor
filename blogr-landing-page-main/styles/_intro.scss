@@ -23,6 +23,7 @@
     margin-left: 2rem;
     &_active {
       flex-direction: column;
+      margin-left: 0;
     }
   }
   &__item {
@@ -44,6 +45,13 @@
   }
   &__arrow {
     transition: transform 0.5s;
+    display: none;
+    &_dark {
+      transition: transform 0.5s;
+      &_active {
+        transform: rotateZ(180deg);
+      }
+    }
     &_active {
       transform: rotateZ(180deg);
     }
@@ -110,17 +118,37 @@
     position: fixed;
     top: 7rem;
     left: 2rem;
-    width: 80%;
+    right: 2rem;
     flex-direction: column;
     justify-content: space-between;
     background-color: $clr-white;
     padding: 1.5rem 1rem;
     border-radius: 5px;
     align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+    body {
+      background-color: rgba(0, 0, 0, 1);
+    }
+    & .intro {
+      &__btns {
+        border-top: 1px solid $clr-grayBlue;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+      }
+    }
     & .btn {
       display: block;
       &_login {
         color: $clr-primary-darkBlue;
+        margin-right: 0;
+        &:hover,
+        &:focus {
+          text-decoration: 2px underline;
+          text-underline-position: under;
+        }
       }
       &_btn-white {
         background: linear-gradient(
@@ -129,9 +157,17 @@
           $clr-bg-lightRed
         );
         color: $clr-white;
+        &:hover,
+        &:focus {
+          border-color: $clr-primary-lightRed;
+          background: $clr-white;
+          color: $clr-primary-lightRed;
+        }
       }
     }
     .nav {
+      width: 100%;
+      text-align: center;
       &__item:not(:first-of-type) {
         margin-left: 0;
       }
@@ -139,12 +175,44 @@
         margin-bottom: 2rem;
       }
       &__link {
-        color: $clr-primary-darkBlue;
+        color: $clr-bg-darkGrayBlue;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $clr-bg-darkDesBlue;
+        }
+      }
+    }
+    .dropdown-container {
+      &__link {
+        font-weight: 500;
+        display: inline;
+        color: $clr-bg-darkDesBlue;
+        &:hover {
+          font-weight: 700;
+        }
+        &:focus {
+          font-weight: 700;
+          color: $clr-primary-darkBlue;
+        }
+      }
+      &_active {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        padding: 2rem;
+        margin: 1rem auto;
+        transform: translateX(0);
+        width: 90%;
+        background-color: rgba($clr-grayBlue, 0.5);
       }
     }
   }
 }
 
 .burger {
-  padding-right: 2rem;
+  // padding-right: 2rem;
+  position: fixed;
+  top: 3.2rem;
+  right: 2rem;
 }

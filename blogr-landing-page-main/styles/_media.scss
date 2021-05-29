@@ -11,7 +11,14 @@
       padding-right: 6rem;
     }
   }
-
+  .nav {
+    &__arrow {
+      display: inline;
+      &_dark {
+        display: none;
+      }
+    }
+  }
   .menu {
     width: 100%;
     display: flex;
