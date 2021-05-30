@@ -1,5 +1,5 @@
 .intro {
-  background: url("../images/bg-pattern-intro.svg") no-repeat center/300%,
+  background: url("../images/bg-pattern-intro.svg") no-repeat 35% 35% / 300%,
     linear-gradient(to right, $clr-bg-veryLightRed, $clr-bg-lightRed);
   border-bottom-left-radius: 100px;
   &__nav {
@@ -261,5 +261,15 @@
     margin-top: 5rem;
     margin-bottom: 10rem;
     padding: 0 1rem;
+    @media screen and (max-width: 23em) {
+      & {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .btn_btn-white {
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
 }

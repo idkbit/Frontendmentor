@@ -3,6 +3,8 @@ const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const navList = document.querySelector(".nav__list");
 
+
+//if click outside menu
 window.addEventListener("click", e => {
   const isClickInsideMenu = menu.contains(e.target);
   const isBurger = burger.contains(e.target);
