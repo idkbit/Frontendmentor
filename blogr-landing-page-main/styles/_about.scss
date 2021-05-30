@@ -1,0 +1,33 @@
+.about {
+  text-align: center;
+  &__heading2,
+  &__heading3 {
+    color: $clr-primary-darkBlue;
+  }
+  &__heading2 {
+    padding-top: 5rem;
+    font-weight: 500;
+  }
+  &__heading3 {
+    margin-top: 2rem;
+  }
+  &__paragraph {
+    margin-top: 2rem;
+    line-height: 2;
+    color: rgba($clr-primary-darkBlue, 0.8);
+  }
+  &__image {
+    margin-top: 2rem;
+    background: url("../images/illustration-editor-mobile.svg") no-repeat
+      center/ contain;
+    height: 22rem;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.text {
+  margin-left: 2rem;
+}
