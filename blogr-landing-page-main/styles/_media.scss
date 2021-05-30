@@ -60,6 +60,25 @@
       background: none;
     }
   }
+  .text {
+    margin-left: 4rem;
+  }
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    &__logo {
+      margin-top: 4rem;
+      margin-left: 4rem;
+    }
+    &__nav {
+      display: flex;
+      width: 80%;
+      justify-content: space-evenly;
+    }
+    &__heading4 {
+      margin-top: 4rem;
+    }
+  }
 }
 @media screen and (min-width: 70.625em) {
   .intro {
@@ -76,6 +95,11 @@
   .about {
     background: url("../images/illustration-editor-desktop.svg") no-repeat 123%
       3rem / contain;
+  }
+  .footer {
+    &__logo {
+      margin-left: 12rem;
+    }
   }
 }
 
