@@ -1,8 +1,7 @@
 .intro {
-  background: url("../images/bg-pattern-intro.svg") no-repeat center
-      center/cover,
+  background: url("../images/bg-pattern-intro.svg") no-repeat center/300%,
     linear-gradient(to right, $clr-bg-veryLightRed, $clr-bg-lightRed);
-  height: 600px;
+  border-bottom-left-radius: 100px;
   &__nav {
     margin-bottom: 5rem;
     display: flex;
@@ -20,7 +19,7 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    margin-left: 2rem;
+    margin-left: 5rem;
     &_active {
       flex-direction: column;
       margin-left: 0;
@@ -37,7 +36,8 @@
     font-weight: 500;
     position: relative;
     &:hover,
-    &:focus {
+    &:focus,
+    &_active {
       color: $clr-white;
       text-decoration: underline 2px;
       text-underline-position: under;
@@ -85,7 +85,7 @@
 
 .btn {
   border-radius: 30px;
-  padding: 0.6rem 2rem;
+  padding: 0.8rem 2rem;
   border: 1px solid #000;
   &:nth-child(odd) {
     margin-right: 0.5rem;
@@ -94,6 +94,7 @@
     border-color: transparent;
     color: $clr-grayBlue;
     transition: 0.5s;
+    font-weight: 500;
     &:hover {
       color: $clr-white;
     }
@@ -101,12 +102,24 @@
   &_btn-white {
     background-color: $clr-white;
     color: $clr-primary-lightRed;
-    font-weight: 500;
+    font-weight: 700;
     border-color: transparent;
     transition: background-color 0.5s, color 0.5s;
     &:hover {
       background-color: $clr-primary-veryLightRed;
       color: $clr-white;
+    }
+  }
+  &_transparent {
+    background-color: transparent;
+    color: $clr-white;
+    border-color: $clr-white;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+      background-color: $clr-white;
+      border-color: $clr-primary-lightRed;
+      color: $clr-primary-lightRed;
     }
   }
 }
@@ -215,4 +228,38 @@
   position: fixed;
   top: 3.2rem;
   right: 2rem;
+  &__icon_hidden {
+    display: none;
+  }
+  &__icon_close {
+    display: none;
+    &_active {
+      display: block;
+    }
+  }
+}
+
+.info {
+  color: $clr-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__heading2 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0 1rem;
+  }
+  &__heading3 {
+    margin-top: 3rem;
+    font-weight: 300;
+    padding: 0 1rem;
+    color: rgba($clr-white, 0.8);
+  }
+  &__btns {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    padding: 0 1rem;
+  }
 }

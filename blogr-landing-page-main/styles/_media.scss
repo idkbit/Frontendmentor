@@ -24,4 +24,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .info {
+    &__heading2 {
+      font-weight: 500;
+    }
+  }
 }
