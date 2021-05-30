@@ -1,0 +1,32 @@
+.footer {
+  background-color: $clr-bg-darkGrayBlue;
+  border-top-right-radius: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__logo {
+    margin-top: 2rem;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__heading4 {
+    text-align: center;
+    color: $clr-white;
+    margin-top: 2rem;
+  }
+  &__link {
+    color: $clr-grayBlue;
+    &:hover,
+    &:focus {
+      text-decoration: underline 2px;
+    }
+  }
+  &__nav {
+    margin-bottom: 2rem;
+  }
+}
