@@ -30,6 +30,8 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 891) {
     menu.classList.remove("menu_active");
     navList.classList.remove("nav__list_active");
+    burger.firstElementChild.classList.remove("burger__icon_hidden");
+    burger.lastElementChild.classList.remove("burger__icon_close_active");
   }
 })
 
