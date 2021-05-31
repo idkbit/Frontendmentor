@@ -85,7 +85,7 @@
 
 .btn {
   border-radius: 30px;
-  padding: 0.8rem 2rem;
+  padding: 1rem 1.7rem;
   border: 1px solid #000;
   &:nth-child(odd) {
     margin-right: 0.5rem;
@@ -224,7 +224,6 @@
 }
 
 .burger {
-  // padding-right: 2rem;
   position: fixed;
   top: 3.2rem;
   right: 2rem;
