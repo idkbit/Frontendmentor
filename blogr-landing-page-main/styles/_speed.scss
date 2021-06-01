@@ -1,9 +1,29 @@
 .speed {
   display: flex;
-  background-color: $clr-bg-darkDesBlue;
+  flex-direction: column;
+  border-bottom-left-radius: 100px;
+  background: $clr-bg-darkDesBlue url("../images/bg-pattern-circles.svg")
+    no-repeat top center/contain;
+  margin-top: 15rem;
   &__image {
-    margin-left: 2rem;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 100%;
+    transform: translateY(-50%);
   }
   &__text {
+    text-align: center;
+    transform: translateY(-50%);
+    margin: 0 2rem;
+  }
+  &__heading3 {
+    color: $clr-white;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  &__paragraph {
+    color: $clr-grayBlue;
+    margin-top: 2rem;
+    line-height: 2;
   }
 }

@@ -82,6 +82,28 @@
       margin-top: 4rem;
     }
   }
+  .speed {
+    flex-direction: row;
+    margin: 5rem 0;
+    background: $clr-bg-darkDesBlue url("../images/bg-pattern-circles.svg") left -150px /
+      50% no-repeat;
+    &__image {
+      transform: translateY(0);
+      transform: scale(1.4);
+      height: auto;
+      max-width: 300px;
+      margin-left: 5rem;
+    }
+    &__text {
+      transform: translateY(0);
+      text-align: left;
+      margin: 5rem 15rem 5rem 7rem;
+    }
+    &__paragraph {
+      line-height: 1.5;
+      font-size: 1.2rem;
+    }
+  }
 }
 @media screen and (min-width: 70.625em) {
   .intro {
@@ -98,6 +120,11 @@
   .about {
     background: url("../images/illustration-editor-desktop.svg") no-repeat 123%
       3rem / contain;
+  }
+  .speed {
+    &__image {
+      margin-left: 12rem;
+    }
   }
   .footer {
     &__logo {
