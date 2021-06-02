@@ -20,9 +20,10 @@
     color: $clr-white;
     font-size: 2.5rem;
     font-weight: 300;
+    margin-top: 2rem;
   }
   &__paragraph {
-    color: $clr-grayBlue;
+    color: rgba($clr-primary-darkBlue, 0.8);
     margin-top: 2rem;
     line-height: 2;
   }

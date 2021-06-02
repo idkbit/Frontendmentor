@@ -90,7 +90,7 @@
     &__image {
       transform: translateY(0);
       transform: scale(1.4);
-      height: auto;
+      height: 100%;
       max-width: 300px;
       margin-left: 5rem;
     }
@@ -102,6 +102,18 @@
     &__paragraph {
       line-height: 1.5;
       font-size: 1.2rem;
+    }
+  }
+  .features {
+    flex-direction: row;
+    &__image {
+      &-desktop {
+        display: inline-block;
+        transform: translateX(-10%);
+      }
+      &-mobile {
+        display: none;
+      }
     }
   }
 }
