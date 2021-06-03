@@ -226,8 +226,10 @@
 
 .burger {
   position: fixed;
+  padding: 2px;
   top: 3.2rem;
   right: 2rem;
+  z-index: 100;
   &__icon_hidden {
     display: none;
   }

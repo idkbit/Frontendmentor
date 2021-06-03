@@ -33,6 +33,22 @@ window.addEventListener("resize", () => {
     burger.firstElementChild.classList.remove("burger__icon_hidden");
     burger.lastElementChild.classList.remove("burger__icon_close_active");
   }
+});
+
+window.addEventListener("scroll", e => {
+  console.log(window.pageYOffset)
+  if (window.pageYOffset < 526) {
+    burger.style.backgroundColor = "";
+  }
+  if (window.pageYOffset > 526) {
+    burger.style.backgroundColor = "rgba(0,0,0,0.3)";
+  }
+  if (window.pageYOffset > 1996) {
+    burger.style.backgroundColor = "";
+  }
+  if (window.pageYOffset > 2591) {
+    burger.style.backgroundColor = "rgba(0,0,0,0.3)"
+  }
 })
 
 navLinks.forEach(link => {
