@@ -3,6 +3,8 @@
   flex-direction: column;
   &__image {
     margin: 1rem 0;
+    display: flex;
+    justify-content: center;
     &-desktop {
       display: none;
       max-width: 100%;
