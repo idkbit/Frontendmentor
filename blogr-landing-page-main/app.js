@@ -35,19 +35,28 @@ window.addEventListener("resize", () => {
   }
 });
 
-window.addEventListener("scroll", e => {
-  console.log(window.pageYOffset)
-  if (window.pageYOffset < 526) {
-    burger.style.backgroundColor = "";
+window.addEventListener("scroll", () => {
+  const burgerStripes = burger.firstElementChild.firstElementChild;
+  const closeSvg = burger.lastElementChild.firstElementChild;
+  const aboutSectionOffset = document.querySelector(".about").offsetTop;
+  const speedSectionOffset = document.querySelector(".speed").offsetTop + document.querySelector(".speed__heading3").offsetTop;
+  const featuresSectionOffset = document.querySelector(".features").offsetTop;
+  console.dir(document.querySelector(".features"))
+  if (window.pageYOffset < aboutSectionOffset) {
+    burgerStripes.style.fill = "#fff";
+    closeSvg.style.fill = "#fff";
   }
-  if (window.pageYOffset > 526) {
-    burger.style.backgroundColor = "rgba(0,0,0,0.3)";
+  if (window.pageYOffset > aboutSectionOffset) {
+    burgerStripes.style.fill = "#000";
+    closeSvg.style.fill = "#000";
   }
-  if (window.pageYOffset > 1996) {
-    burger.style.backgroundColor = "";
+  if (window.pageYOffset > speedSectionOffset) {
+    burgerStripes.style.fill = "#fff";
+    closeSvg.style.fill = "#fff";
   }
-  if (window.pageYOffset > 2591) {
-    burger.style.backgroundColor = "rgba(0,0,0,0.3)"
+  if (window.pageYOffset > featuresSectionOffset - 60) {
+    burgerStripes.style.fill = "#000";
+    closeSvg.style.fill = "#000";
   }
 })
 
