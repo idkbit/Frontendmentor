@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   border-bottom-left-radius: 100px;
-  background: $clr-bg-darkDesBlue url("../images/bg-pattern-circles.svg")
-    no-repeat top center/contain;
+  background: $clr-bg-darkGrayBlue url("../images/bg-pattern-circles.svg")
+    no-repeat center -300% / 40rem;
   margin-top: 15rem;
   &__image {
     margin: 0 auto;
