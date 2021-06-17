@@ -13,18 +13,31 @@ window.addEventListener("click", e => {
     navList.classList.remove("nav__list_active");
     burger.firstElementChild.classList.toggle("burger__icon_hidden");
     burger.lastElementChild.classList.toggle("burger__icon_close_active");
+    navLinks.forEach(link => {
+      link.firstElementChild.classList.remove("nav__arrow_active");
+      link.lastElementChild.classList.remove("nav__arrow_dark_active");
+      link.nextElementSibling.classList.remove("dropdown-container_active");
+    })
   }
-});
-
-menu.addEventListener("click", e => {
   navLinks.forEach(link => {
+    if (link.nextElementSibling === e.target || link.nextElementSibling.contains(e.target)) return;
     if (e.target !== link) {
       link.firstElementChild.classList.remove("nav__arrow_active");
-      link.lastElementChild.classList.remove("nav__arrow_dark_active")
+      link.lastElementChild.classList.remove("nav__arrow_dark_active");
       link.nextElementSibling.classList.remove("dropdown-container_active");
     }
-  });
+  })
 });
+
+// menu.addEventListener("click", e => {
+//   navLinks.forEach(link => {
+//     if (e.target !== link) {
+//       link.firstElementChild.classList.remove("nav__arrow_active");
+//       link.lastElementChild.classList.remove("nav__arrow_dark_active");
+//       link.nextElementSibling.classList.remove("dropdown-container_active");
+//     }
+//   });
+// });
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 891) {
@@ -41,16 +54,15 @@ window.addEventListener("scroll", () => {
   const aboutSectionOffset = document.querySelector(".about").offsetTop;
   const speedSectionOffset = document.querySelector(".speed").offsetTop + document.querySelector(".speed__heading3").offsetTop;
   const featuresSectionOffset = document.querySelector(".features").offsetTop;
-  console.dir(document.querySelector(".features"))
   if (window.pageYOffset < aboutSectionOffset) {
     burgerStripes.style.fill = "#fff";
     closeSvg.style.fill = "#fff";
   }
-  if (window.pageYOffset > aboutSectionOffset) {
+  if (window.pageYOffset > aboutSectionOffset - 60) {
     burgerStripes.style.fill = "#000";
     closeSvg.style.fill = "#000";
   }
-  if (window.pageYOffset > speedSectionOffset) {
+  if (window.pageYOffset > speedSectionOffset - 75) {
     burgerStripes.style.fill = "#fff";
     closeSvg.style.fill = "#fff";
   }
@@ -75,7 +87,7 @@ navLinks.forEach(link => {
   })
 });
 
-burger.addEventListener("click", e => {
+burger.addEventListener("click", () => {
   menu.classList.toggle("menu_active");
   navList.classList.toggle("nav__list_active");
   burger.firstElementChild.classList.toggle("burger__icon_hidden");
