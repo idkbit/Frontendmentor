@@ -1,5 +1,34 @@
 @import "variables";
 
 :root {
-  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: "Barlow", sans-serif;
+  // font-family: 'Fraunces', serif;
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.block-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@import "header";

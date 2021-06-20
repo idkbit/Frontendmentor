@@ -1,0 +1,61 @@
+.header {
+  background: url("../images/mobile/image-header.jpg");
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+}
+
+.links {
+  display: none;
+  &_active {
+    display: block;
+    background-color: $clr-white;
+    position: fixed;
+    right: 1rem;
+    left: 1rem;
+    top: 5rem;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-right: 30px solid $clr-white;
+      top: -15px;
+      right: 0;
+    }
+    .links__list {
+      padding: 2rem 0;
+    }
+    .links__item {
+      text-align: center;
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__link {
+    color: $clr-neutral-dgb;
+  }
+  &__btn {
+    background-color: $clr-primary-yellow;
+    color: $clr-neutral-vddb;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  &_active {
+    .burger-menu__stripes {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
