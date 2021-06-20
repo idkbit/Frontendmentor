@@ -1,4 +1,4 @@
-@media screen and (min-width: 41.25em) {
+@media screen and (min-width: 46.875em) {
   .block-padding {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -50,10 +50,10 @@
   .hero {
     &__heading {
       font-size: 3rem;
+      margin-top: 10rem;
     }
     &__arrow-down {
-      margin-top: 5rem;
-      padding-bottom: 17rem;
+      margin-top: 10rem;
     }
   }
 }
