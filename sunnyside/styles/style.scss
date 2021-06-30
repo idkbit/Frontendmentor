@@ -24,6 +24,9 @@ a {
 
 .wrapper {
   position: relative;
+  max-width: 2400px;
+  margin: 0 auto;
+  box-shadow: 2px 0 #000, -2px 0 #000;
 }
 
 .block-padding {
@@ -32,5 +35,5 @@ a {
 }
 
 @import "header";
-@import "media";
 @import "grid";
+@import "media";

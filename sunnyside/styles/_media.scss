@@ -56,4 +56,50 @@
       margin-top: 10rem;
     }
   }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "transform transform-egg"
+      "stand-out-cup stand-out";
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 65%;
+      margin: 0 auto;
+      text-align: left;
+      &-transform {
+        grid-area: transform;
+      }
+      &-stand-out {
+        grid-area: stand-out;
+      }
+    }
+    &__image {
+      height: 600px;
+      &-transform {
+        background-image: url("../images/desktop/image-transform.jpg");
+        grid-area: transform-egg;
+      }
+      &-stand-out {
+        background-image: url("../images/desktop/image-stand-out.jpg");
+        grid-area: stand-out-cup;
+      }
+    }
+    &__heading {
+      margin-right: auto;
+    }
+
+    &__paragraph {
+      line-height: 1.8;
+    }
+
+    &__link {
+      margin-right: auto;
+    }
+  }
 }
