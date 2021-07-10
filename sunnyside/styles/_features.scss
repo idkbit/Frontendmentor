@@ -1,0 +1,28 @@
+.features {
+  &__block {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 600px;
+    &_design {
+      background-image: url("../images/mobile/image-graphic-design.jpg");
+    }
+    &_photography {
+      background-image: url("../images/mobile/image-photography.jpg");
+    }
+  }
+  &__heading {
+    padding-top: 20rem;
+    color: $clr-primary-ddc;
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+  }
+  &__text {
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: $clr-primary-ddc;
+  }
+}
