@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 600px;
     &_design {
       background-image: url("../images/mobile/image-graphic-design.jpg");
     }
@@ -13,7 +12,7 @@
     }
   }
   &__heading {
-    padding-top: 20rem;
+    padding-top: 25rem;
     color: $clr-primary-ddc;
     font-weight: 900;
     font-family: "Fraunces", serif;

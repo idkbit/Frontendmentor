@@ -9,6 +9,9 @@
     word-spacing: 0.3rem;
     font-size: 1rem;
   }
+  &__container {
+    padding-bottom: 5rem;
+  }
 }
 
 .card {
@@ -16,6 +19,8 @@
   &__photo {
     margin-top: 3rem;
     img {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
     }
   }
@@ -25,8 +30,12 @@
   }
   &__name {
     margin-top: 3rem;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
   }
   &__occupation {
     margin-top: 1rem;
+    font-size: 0.8rem;
+    color: $clr-neutral-grayBlue;
   }
 }

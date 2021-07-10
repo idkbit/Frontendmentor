@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  height: 100vh;
+  // height: 100vh;
   &__top {
     display: flex;
     align-items: center;
@@ -17,7 +17,8 @@
   &_active {
     display: block;
     background-color: $clr-white;
-    position: fixed;
+    position: absolute;
+    z-index: 100;
     right: 1rem;
     left: 1rem;
     top: 5rem;
@@ -57,10 +58,10 @@
 }
 
 .burger-menu {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  transform: translateY(75%);
+  // position: fixed;
+  // top: 1rem;
+  // right: 1rem;
+  // transform: translateY(75%);
   &_active {
     .burger-menu__stripes {
       fill: rgba(255, 255, 255, 0.5);

@@ -5,6 +5,7 @@
   }
   .header {
     background-image: url("../images/desktop/image-header.jpg");
+    height: 100vh;
     &__top {
       padding-top: 3rem;
     }
@@ -80,7 +81,7 @@
       }
     }
     &__image {
-      height: 600px;
+      min-height: 600px;
       &-transform {
         background-image: url("../images/desktop/image-transform.jpg");
         grid-area: transform-egg;
@@ -124,6 +125,42 @@
       margin-left: auto;
       margin-right: auto;
       font-size: 1rem;
+    }
+  }
+
+  .testimonials {
+    &__heading {
+      margin-top: 10rem;
+    }
+    &__container {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding-bottom: 10rem;
+    }
+  }
+
+  .card {
+    &__photo {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    &__review {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    &__img-mobile {
+      display: none;
+    }
+    &__img-desktop {
+      display: block;
     }
   }
 }

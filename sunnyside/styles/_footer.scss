@@ -1,0 +1,31 @@
+.footer {
+  background-color: hsl(168, 57%, 72%);
+  text-align: center;
+  padding-top: 3rem;
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+  &__nav {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__link {
+    color: $clr-primary-dmc;
+  }
+}
+
+.socials {
+  display: flex;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 12rem;
+  justify-content: space-between;
+  &__link {
+    color: darken($color: $clr-primary-dmc, $amount: 20%);
+  }
+}
